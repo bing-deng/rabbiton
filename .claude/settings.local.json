@@ -32,7 +32,10 @@
       "Bash(timeout 10 grep -oE '\\(YUKA|SHIN|yuka|shin|しん先生|ゆか先生|柊凪沙\\)' /tmp/rabbit.html)",
       "Bash(grep -oE '.{0,60}\\(YUKA|SHIN\\).{0,100}' /tmp/rabbit.html)",
       "Bash(perl -ne 'while\\(/\\(.{0,80}\\(YUKA|SHIN\\).{0,120}\\)/g\\){print \"$1\\\\n---\\\\n\"}' /tmp/rabbit.html)",
-      "Bash(perl -ne 'while\\(/\\(.{0,80}\\(nizinoma_ma|shin_tarot|rabbit\\\\.kekkon|lin\\\\.ee|docs\\\\.google\\).{0,80}\\)/g\\){print \"$1\\\\n---\\\\n\"}' /tmp/rabbit.html)"
+      "Bash(perl -ne 'while\\(/\\(.{0,80}\\(nizinoma_ma|shin_tarot|rabbit\\\\.kekkon|lin\\\\.ee|docs\\\\.google\\).{0,80}\\)/g\\){print \"$1\\\\n---\\\\n\"}' /tmp/rabbit.html)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3005/legal/privacy)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3005/legal/tokushoho)",
+      "Bash(kill 72999)"
     ]
   }
 }
