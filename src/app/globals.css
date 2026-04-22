@@ -1,26 +1,63 @@
 @import "tailwindcss";
 
+@theme {
+  --color-cream-50: #fdf9f4;
+  --color-cream-100: #fbf1e5;
+  --color-cream-200: #f5e1c8;
+  --color-rose-primary: #c75b6e;
+  --color-rose-deep: #a8364c;
+  --color-rose-soft: #f3d0d4;
+  --color-rose-blush: #fbe7e5;
+  --color-gold: #b68c5a;
+  --color-gold-soft: #e2c79b;
+  --color-ink: #2d2423;
+
+  --font-sans: var(--font-sans-jp), var(--font-sans-sc), ui-sans-serif,
+    system-ui, sans-serif;
+  --font-serif: var(--font-serif-jp), var(--font-serif-sc), "Noto Serif JP",
+    "Hiragino Mincho ProN", "Yu Mincho", serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  font-feature-settings: "palt" 1;
+  letter-spacing: 0.02em;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+/* Subtle paper-like texture using a radial dot pattern */
+.bg-paper {
+  background-color: #fdf7f2;
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(199, 91, 110, 0.06) 0, transparent 45%),
+    radial-gradient(circle at 88% 82%, rgba(182, 140, 90, 0.07) 0, transparent 45%);
+}
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-floaty {
+  animation: floaty 6s ease-in-out infinite;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s ease-out both;
 }

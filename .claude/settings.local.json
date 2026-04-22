@@ -11,7 +11,28 @@
       "mcp__ui-mcp__list_categories",
       "mcp__ui-mcp__get_component",
       "Bash(npm -v)",
-      "Bash(npx --yes create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --no-turbopack --import-alias \"@/*\" --use-npm --yes)"
+      "Bash(npx --yes create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --no-turbopack --import-alias \"@/*\" --use-npm --yes)",
+      "Bash(npm run *)",
+      "Bash(curl -sf -o /dev/null http://localhost:3000/)",
+      "Bash(curl -sf http://localhost:3001/ -o /tmp/rabbiton-rendered.html)",
+      "Bash(grep -oE 'aria[^=]*=\"[^\"]{0,30}\\(Error|Not Found\\)[^\"]*\"|class=\"[^\"]*error[^\"]*\"' /tmp/rabbiton-rendered.html)",
+      "Read(//Users/dengbingbing/**)",
+      "Bash(grep -oE '[ぁ-んァ-ン一-龯A-Za-z][ぁ-んァ-ン一-龯、。ー・A-Za-z0-9 ]{1,40}' /tmp/rabbit.html)",
+      "Bash(grep -oE '\"\\(sectionTitle|pageTitle|menuItem|label|navLabel|title|menuName\\)\":\"[^\"]{1,50}\"' /tmp/rabbit.html)",
+      "Bash(grep -oE 'href\\\\\\\\?\"[#/][^\"\\\\\\\\]{0,50}' /tmp/rabbit.html)",
+      "Bash(grep -oE '\"\\\\\\\\?\\(href|url|link\\)\\\\\\\\?\":\\\\\\\\?\"[#/][^\"\\\\\\\\]{0,60}' /tmp/rabbit.html)",
+      "Bash(grep -oE 'ANCHOR_COMP_[a-z0-9_-]{1,30}|\"id\":\"[a-z0-9_-]{2,30}\"|#[a-z][a-z_-]{2,30}' /tmp/rabbit.html)",
+      "Bash(npx tsc *)",
+      "Bash(lsof -ti:3000)",
+      "Bash(lsof -ti:3001)",
+      "Bash(PORT=3005 npm run *)",
+      "Bash(curl -sf -o /dev/null http://localhost:3005/)",
+      "Bash(kill 51591)",
+      "Bash(grep -oE '\"[^\"]*\\(YUKA|SHIN|yuka|shin|しん|ゆか|柊|凪\\)[^\"]{0,200}' /tmp/rabbit.html)",
+      "Bash(timeout 10 grep -oE '\\(YUKA|SHIN|yuka|shin|しん先生|ゆか先生|柊凪沙\\)' /tmp/rabbit.html)",
+      "Bash(grep -oE '.{0,60}\\(YUKA|SHIN\\).{0,100}' /tmp/rabbit.html)",
+      "Bash(perl -ne 'while\\(/\\(.{0,80}\\(YUKA|SHIN\\).{0,120}\\)/g\\){print \"$1\\\\n---\\\\n\"}' /tmp/rabbit.html)",
+      "Bash(perl -ne 'while\\(/\\(.{0,80}\\(nizinoma_ma|shin_tarot|rabbit\\\\.kekkon|lin\\\\.ee|docs\\\\.google\\).{0,80}\\)/g\\){print \"$1\\\\n---\\\\n\"}' /tmp/rabbit.html)"
     ]
   }
 }
