@@ -10,7 +10,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-ink text-stone-300">
+    <footer className="bg-ink text-stone-100">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 py-16 grid md:grid-cols-12 gap-10">
         <div className="md:col-span-5">
           <a href="#home" className="flex items-center gap-2">
@@ -21,13 +21,13 @@ export default function Footer() {
               RABBIT<span className="text-rose-soft">.</span>
             </span>
           </a>
-          <p className="mt-5 text-sm leading-relaxed text-stone-400 max-w-sm">{f.tagline}</p>
+          <p className="mt-5 text-sm leading-relaxed text-stone-200 max-w-sm">{f.tagline}</p>
           <div className="mt-6 flex flex-wrap gap-2">
             <a
               href={EXTERNAL_LINKS.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/15 text-xs hover:border-rose-primary hover:text-rose-soft transition-colors"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/30 text-xs text-stone-100 hover:border-rose-primary hover:text-rose-soft hover:bg-white/5 transition-colors"
               aria-label="Instagram @rabbit.kekkon"
             >
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -41,7 +41,7 @@ export default function Footer() {
               href={EXTERNAL_LINKS.tiktokShin}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/15 text-xs hover:border-rose-primary hover:text-rose-soft transition-colors"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/30 text-xs text-stone-100 hover:border-rose-primary hover:text-rose-soft hover:bg-white/5 transition-colors"
               aria-label="TikTok @shin_tarot"
             >
               <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
@@ -53,7 +53,7 @@ export default function Footer() {
               href={EXTERNAL_LINKS.tiktokYuka}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/15 text-xs hover:border-rose-primary hover:text-rose-soft transition-colors"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/30 text-xs text-stone-100 hover:border-rose-primary hover:text-rose-soft hover:bg-white/5 transition-colors"
               aria-label="TikTok @nizinoma_ma"
             >
               <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
@@ -65,7 +65,7 @@ export default function Footer() {
               href={EXTERNAL_LINKS.line}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/15 text-xs hover:border-[#06C755] hover:text-[#06C755] transition-colors"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/30 text-xs text-stone-100 hover:border-[#06C755] hover:text-[#06C755] hover:bg-white/5 transition-colors"
               aria-label="LINE 公式アカウント"
             >
               <span className="font-bold tracking-wider">LINE</span>
@@ -74,26 +74,31 @@ export default function Footer() {
         </div>
 
         <div className="md:col-span-4">
-          <h4 className="font-serif text-white text-lg">{f.companyHeading}</h4>
+          <h4 className="font-serif text-white text-lg tracking-wide">{f.companyHeading}</h4>
           <dl className="mt-4 space-y-3 text-sm">
             {f.info.map((i) => (
               <div key={i.label} className="grid grid-cols-[6rem_1fr] gap-3">
-                <dt className="text-stone-500 text-xs tracking-wider uppercase pt-0.5">{i.label}</dt>
-                <dd className="text-stone-200">{i.value}</dd>
+                <dt className="text-rose-soft/90 text-xs tracking-wider uppercase pt-1 font-medium">
+                  {i.label}
+                </dt>
+                <dd className="text-white">{i.value}</dd>
               </div>
             ))}
           </dl>
         </div>
 
         <div className="md:col-span-3">
-          <h4 className="font-serif text-white text-lg">{f.guideHeading}</h4>
+          <h4 className="font-serif text-white text-lg tracking-wide">{f.guideHeading}</h4>
           <ul className="mt-4 space-y-2.5 text-sm">
             {LINK_KEYS.map((key) => {
               const entry = f.links.find((l) => l.key === key);
               if (!entry) return null;
               return (
                 <li key={key}>
-                  <a href={`#${key}`} className="hover:text-rose-soft transition-colors">
+                  <a
+                    href={`#${key}`}
+                    className="text-stone-100 hover:text-rose-soft transition-colors"
+                  >
                     {entry.label}
                   </a>
                 </li>
@@ -103,14 +108,20 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 py-6 flex flex-wrap items-center justify-between gap-3 text-xs text-stone-500">
+      <div className="border-t border-white/15">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 py-6 flex flex-wrap items-center justify-between gap-3 text-xs text-stone-300">
           <p>{f.rights.replace("{{year}}", String(year))}</p>
           <div className="flex gap-5">
-            <a href="#" className="hover:text-rose-soft">
+            <a
+              href="/legal/privacy"
+              className="text-stone-200 hover:text-rose-soft transition-colors"
+            >
               {f.privacy}
             </a>
-            <a href="#" className="hover:text-rose-soft">
+            <a
+              href="/legal/tokushoho"
+              className="text-stone-200 hover:text-rose-soft transition-colors"
+            >
               {f.tos}
             </a>
           </div>
