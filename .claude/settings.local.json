@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:rabbitonlinemarriage.com)",
+      "Bash(curl -sL -A \"Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://rabbitonlinemarriage.com/\" -o /tmp/rabbit.html)",
+      "Read(//tmp/**)",
+      "Bash(grep -oE '[ぁ-んァ-ン一-龯]{2,}' /tmp/rabbit.html)",
+      "Bash(grep -oE '[ぁ-んァ-ン一-龯][ぁ-んァ-ン一-龯、。ー・！？「」『』（）〜A-Za-z0-9 ]{3,100}' /tmp/rabbit.html)",
+      "mcp__ui-mcp__list_libraries",
+      "mcp__ui-mcp__search_components",
+      "mcp__ui-mcp__list_categories",
+      "mcp__ui-mcp__get_component",
+      "Bash(npm -v)",
+      "Bash(npx --yes create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --no-turbopack --import-alias \"@/*\" --use-npm --yes)"
+    ]
+  }
+}
