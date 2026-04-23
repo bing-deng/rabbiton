@@ -109,6 +109,21 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/15">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 py-6">
+          <div className="flex items-start gap-3 text-xs leading-relaxed text-stone-200 bg-white/5 border border-white/10 rounded-2xl px-4 py-3">
+            <span className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-rose-primary/20 border border-rose-primary/40 grid place-items-center text-rose-soft">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" y1="8" x2="12" y2="12" />
+                <line x1="12" y1="16" x2="12.01" y2="16" />
+              </svg>
+            </span>
+            <p>{f.conduct}</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 py-6 flex flex-wrap items-center justify-between gap-3 text-xs text-stone-300">
           <p>{f.rights.replace("{{year}}", String(year))}</p>
           <div className="flex gap-5">

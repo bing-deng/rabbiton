@@ -85,7 +85,9 @@ export type Dictionary = {
     titleA: string;
     titleAccent: string;
     lead: string;
-    items: { name: string; meta: string; body: string }[];
+    monitorNote: string;
+    monitorTag: string;
+    items: { name: string; meta: string; body: string; monitor?: boolean }[];
   };
   faq: {
     eyebrow: string;
@@ -108,6 +110,7 @@ export type Dictionary = {
     guideHeading: string;
     info: { label: string; value: string }[];
     links: { key: string; label: string }[];
+    conduct: string;
     rights: string;
     privacy: string;
     tos: string;
@@ -287,18 +290,23 @@ const ja: Dictionary = {
     titleAccent: "声",
     lead:
       "結婚・語学・占い——RABBITをご利用いただいた方々の、ありのままの声をご紹介します。",
+    monitorNote:
+      "※ 結婚相談所は現在、本格始動に向けて準備中です。下記の一部は「サービス開始前のモニター様の声」としていただいたご感想です。",
+    monitorTag: "モニター様",
     items: [
       {
         name: "A.K. さん",
-        meta: "30代女性 / 結婚成婚",
+        meta: "30代女性",
+        monitor: true,
         body:
-          "「何から始めればいいのか」の段階から親身に相談に乗っていただき、半年で大切な方に出会えました。夫婦で運営されているので、男女どちらの視点からも安心して話せました。",
+          "最初は何から始めればいいか分からず不安でしたが、丁寧に寄り添ってもらえそうで安心しました。男女両方の視点からアドバイスがもらえるのも魅力的です。",
       },
       {
         name: "R.S. さん",
-        meta: "40代男性 / 国際結婚",
+        meta: "40代男性",
+        monitor: true,
         body:
-          "海外の方とのお付き合いは初めてで不安でしたが、文化の違いまで踏み込んでアドバイスしてくれたのが心強かったです。語学レッスンも併走できて一石二鳥でした。",
+          "海外の方とのお付き合いに不安がありましたが、文化や考え方の違いまでサポートしてもらえる点に安心感を感じました。語学面も含めてサポートしてもらえるのがありがたいです。",
       },
       {
         name: "M.T. さん",
@@ -348,6 +356,8 @@ const ja: Dictionary = {
       { key: "faq", label: "よくある質問" },
       { key: "contact", label: "お問い合わせ" },
     ],
+    conduct:
+      "当サービスでは、他のお客様や運営に対する誹謗中傷・迷惑行為はご遠慮いただいております。悪質な場合には、利用制限や法的対応を含め適切に対処いたします。",
     rights: "© {{year}} RABBIT Online Marriage. All rights reserved.",
     privacy: "プライバシーポリシー",
     tos: "特定商取引法に基づく表記",
@@ -526,10 +536,29 @@ const en: Dictionary = {
     titleA: "Voices of our",
     titleAccent: "members",
     lead: "Real voices from those who chose RABBIT for marriage, languages, and fortune.",
+    monitorNote:
+      "* Our marriage agency is currently preparing for full launch. Some of the voices below are from pre-launch monitor members.",
+    monitorTag: "Monitor",
     items: [
-      { name: "A.K.", meta: "Woman, 30s / Married", body: "They helped me from the very first 'I don't know where to start'. I met my partner in half a year. As a couple, they could see it from both sides." },
-      { name: "R.S.", meta: "Man, 40s / Intl. marriage", body: "I had no experience dating someone from abroad. They even went into cultural differences. The language lessons in parallel were a huge help." },
-      { name: "M.T.", meta: "Woman, 20s / Fortune", body: "Shin-sensei's readings are not only accurate — they tell you what to actually do. It's become my monthly highlight." },
+      {
+        name: "A.K.",
+        meta: "Woman, 30s",
+        monitor: true,
+        body:
+          "At first I was anxious, not knowing where to start. It was reassuring to sense they would walk beside me carefully. Getting advice from both the husband's and the wife's perspectives is also a big plus.",
+      },
+      {
+        name: "R.S.",
+        meta: "Man, 40s",
+        monitor: true,
+        body:
+          "I had some worries about dating someone from overseas, but I was reassured that their support reaches into cultural and mindset differences. Having language support bundled in is really valuable.",
+      },
+      {
+        name: "M.T.",
+        meta: "Woman, 20s / Fortune",
+        body: "Shin-sensei's readings are not only accurate — they tell you what to actually do. It's become my monthly highlight.",
+      },
     ],
   },
   faq: {
@@ -572,6 +601,8 @@ const en: Dictionary = {
       { key: "faq", label: "FAQ" },
       { key: "contact", label: "Contact" },
     ],
+    conduct:
+      "We kindly ask all members to refrain from defamation or harassment directed at other members or our team. In serious cases, we will take appropriate action, including restricting access and pursuing legal measures.",
     rights: "© {{year}} RABBIT Online Marriage. All rights reserved.",
     privacy: "Privacy Policy",
     tos: "Commerce Disclosure",
@@ -740,10 +771,29 @@ const zh: Dictionary = {
     titleA: "来自",
     titleAccent: "会员的声音",
     lead: "选择了 RABBIT 的会员们，如实分享他们的故事。",
+    monitorNote:
+      "※ 本婚姻介绍所目前正在为正式启动做准备。以下部分内容为「服务正式启动前」试用会员分享的使用体验。",
+    monitorTag: "试用会员",
     items: [
-      { name: "A.K. 女士", meta: "30多岁 / 已成婚", body: "从「不知从何开始」的阶段就贴心指导，半年内就遇见了重要的人。由夫妻经营，我可以从男女两种视角安心交流。" },
-      { name: "R.S. 先生", meta: "40多岁 / 国际婚姻", body: "第一次与外国朋友交往，很不安。他们甚至深入解释了文化差异，非常靠谱。能同时上语言课是意外之喜。" },
-      { name: "M.T. 女士", meta: "20多岁 / 占卜", body: "Shin 老师的占卜不只是「准」，更会告诉我具体要怎么做。成为我每个月最期待的事。" },
+      {
+        name: "A.K. 女士",
+        meta: "30多岁",
+        monitor: true,
+        body:
+          "一开始完全不知道该从哪里开始，有些不安；但能感受到他们会细心陪伴，让人放心。能同时听到男女双方视角的建议，对我来说也是很大的加分。",
+      },
+      {
+        name: "R.S. 先生",
+        meta: "40多岁",
+        monitor: true,
+        body:
+          "原本对与外国人交往感到不安，但知道他们连文化与思维方式的差异都会提供支援，就觉得安心很多。加上能同时得到语言方面的支持，真的很难得。",
+      },
+      {
+        name: "M.T. 女士",
+        meta: "20多岁 / 占卜",
+        body: "Shin 老师的占卜不只是「准」，更会告诉我具体要怎么做。成为我每个月最期待的事。",
+      },
     ],
   },
   faq: {
@@ -785,6 +835,8 @@ const zh: Dictionary = {
       { key: "faq", label: "常见问题" },
       { key: "contact", label: "联系我们" },
     ],
+    conduct:
+      "本服务恕不接受对其他会员及运营团队的诽谤中伤或骚扰等迷惑行为。情节严重者，我们将采取包括限制使用、法律追究在内的适当措施。",
     rights: "© {{year}} RABBIT Online Marriage. All rights reserved.",
     privacy: "隐私政策",
     tos: "商业交易条款",
