@@ -4,7 +4,13 @@ export const metadata: Metadata = {
   title: "プライバシーポリシー｜RABBIT",
   description:
     "オンライン結婚相談所 RABBIT のプライバシーポリシー (個人情報保護方針) です。",
+  alternates: { canonical: "/legal/privacy/" },
   robots: { index: true, follow: false },
+  openGraph: {
+    title: "プライバシーポリシー｜RABBIT",
+    description: "オンライン結婚相談所 RABBIT のプライバシーポリシー。",
+    type: "article",
+  },
 };
 
 type Section = { title: string; body: React.ReactNode };

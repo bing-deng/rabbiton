@@ -4,7 +4,13 @@ export const metadata: Metadata = {
   title: "特定商取引法に基づく表記｜RABBIT",
   description:
     "オンライン結婚相談所 RABBIT における特定商取引法に基づく表記です。",
+  alternates: { canonical: "/legal/tokushoho/" },
   robots: { index: true, follow: false },
+  openGraph: {
+    title: "特定商取引法に基づく表記｜RABBIT",
+    description: "オンライン結婚相談所 RABBIT の特商法表記。",
+    type: "article",
+  },
 };
 
 type Row = { label: string; value: React.ReactNode };
