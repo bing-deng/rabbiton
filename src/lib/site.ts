@@ -3,7 +3,7 @@
 
 import { EXTERNAL_LINKS } from "./links";
 
-const fallback = "https://rabbiton.pages.dev";
+const fallback = "https://rabbitonlinemarriage.com";
 
 const raw = process.env.NEXT_PUBLIC_SITE_URL || fallback;
 
