@@ -1,0 +1,4 @@
+# Old Cloudflare Pages domain → new production domain (Vercel).
+# Catch every path and 301 to the same path under the new origin.
+# Cloudflare Pages reads this file; Vercel ignores it, so it's safe to ship from the same repo.
+/*  https://rabbitonlinemarriage.com/:splat  301
