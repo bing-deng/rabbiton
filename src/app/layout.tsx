@@ -32,8 +32,8 @@ const notoSerifSC = Noto_Serif_SC({
   display: "swap",
 });
 
-const TITLE = "RABBIT｜オンライン結婚相談所 — 国際結婚・語学・占いまで寄り添う";
-const SHORT_TITLE = "RABBIT｜オンライン結婚相談所";
+const TITLE = "結婚相談所 RABBIT｜国際結婚・語学・占いまで寄り添うオンライン婚活";
+const SHORT_TITLE = "結婚相談所 RABBIT";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -82,7 +82,7 @@ const jsonLd = {
       "@type": "Organization",
       "@id": `${SITE_URL}#organization`,
       name: SITE.legalName,
-      alternateName: SITE.name,
+      alternateName: [SITE.name, SITE.aliasName],
       url: SITE_URL,
       description: SITE.description,
       founder: {

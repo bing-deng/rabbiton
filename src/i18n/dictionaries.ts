@@ -134,7 +134,7 @@ const ja: Dictionary = {
     consult: "無料相談",
   },
   hero: {
-    badge: "オンライン結婚相談所 RABBIT",
+    badge: "結婚相談所 RABBIT",
     titleA: "あなたの一歩に、",
     titleAccent: "夫婦で寄り添う",
     titleB: "結婚相談所。",
@@ -219,10 +219,10 @@ const ja: Dictionary = {
       {
         name: "日本人会員",
         caption: "国内結婚を目指す方に",
-        monthly: "8,800",
-        perMatch: "月3名ご紹介",
+        monthly: "11,000",
+        perMatch: "お見合い・カウンセリング 3,300円/回",
         features: [
-          "月額会員費",
+          "月額会員費 (税込)",
           "お見合い1回ごとのセッティング",
           "カウンセリング（オンライン）",
           "相性分析・プロフィール添削",
@@ -233,8 +233,8 @@ const ja: Dictionary = {
       {
         name: "外国人会員",
         caption: "国際結婚を希望する方に",
-        monthly: "27,500",
-        perMatch: "お見合い 8,800円/回",
+        monthly: "11,000",
+        perMatch: "お見合い・カウンセリング 5,500円/回",
         features: [
           "国際結婚向けカウンセリング",
           "異文化コミュニケーション支援",
@@ -344,7 +344,7 @@ const ja: Dictionary = {
     companyHeading: "会社概要",
     guideHeading: "ご案内",
     info: [
-      { label: "サービス名", value: "オンライン結婚相談所 RABBIT" },
+      { label: "サービス名", value: "結婚相談所 RABBIT (オンライン対応)" },
       { label: "事業内容", value: "結婚相談・語学レッスン・占い鑑定・パワーストーン販売" },
       { label: "拠点", value: "沖縄 / オンライン全国対応" },
       { label: "運営", value: "夫婦による共同運営" },
@@ -466,10 +466,10 @@ const en: Dictionary = {
       {
         name: "Japan Member",
         caption: "For those seeking domestic marriage",
-        monthly: "8,800",
-        perMatch: "3 intros / month",
+        monthly: "11,000",
+        perMatch: "Meeting & counseling ¥3,300 / session",
         features: [
-          "Monthly membership fee",
+          "Monthly membership fee (tax incl.)",
           "Setup for each meeting",
           "Online counseling",
           "Compatibility analysis & profile review",
@@ -480,8 +480,8 @@ const en: Dictionary = {
       {
         name: "International Member",
         caption: "For those seeking international marriage",
-        monthly: "27,500",
-        perMatch: "Meetings ¥8,800 each",
+        monthly: "11,000",
+        perMatch: "Meeting & counseling ¥5,500 / session",
         features: [
           "Intercultural marriage counseling",
           "Cross-cultural communication help",
@@ -711,17 +711,17 @@ const zh: Dictionary = {
       {
         name: "日本会员",
         caption: "希望在国内结婚的您",
-        monthly: "8,800",
-        perMatch: "每月介绍3位",
-        features: ["月度会员费", "每次相亲安排", "线上咨询", "契合度分析与资料修订"],
+        monthly: "11,000",
+        perMatch: "相亲与咨询 ¥3,300/次",
+        features: ["月度会员费 (含税)", "每次相亲安排", "线上咨询", "契合度分析与资料修订"],
         cta: "咨询此方案",
         highlight: false,
       },
       {
         name: "国际会员",
         caption: "希望国际婚姻的您",
-        monthly: "27,500",
-        perMatch: "相亲 ¥8,800/次",
+        monthly: "11,000",
+        perMatch: "相亲与咨询 ¥5,500/次",
         features: ["国际婚姻专属咨询", "跨文化沟通支援", "结识外国会员", "联动语言课程"],
         cta: "国际方案详情",
         highlight: true,
