@@ -3,12 +3,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "特定商取引法に基づく表記｜RABBIT",
   description:
-    "オンライン結婚相談所 RABBIT における特定商取引法に基づく表記です。",
+    "結婚相談所 RABBIT における特定商取引法に基づく表記です。",
   alternates: { canonical: "/legal/tokushoho/" },
   robots: { index: true, follow: false },
   openGraph: {
     title: "特定商取引法に基づく表記｜RABBIT",
-    description: "オンライン結婚相談所 RABBIT の特商法表記。",
+    description: "結婚相談所 RABBIT の特商法表記。",
     type: "article",
   },
 };
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 type Row = { label: string; value: React.ReactNode };
 
 const rows: Row[] = [
-  { label: "販売業者", value: "オンライン結婚相談所 RABBIT" },
+  { label: "販売業者", value: "結婚相談所 RABBIT" },
   { label: "運営統括責任者", value: "SHIN" },
   {
     label: "所在地",
@@ -65,8 +65,8 @@ const rows: Row[] = [
     label: "販売価格",
     value: (
       <ul className="space-y-1">
-        <li>日本人会員：月額 8,800円（税込）／お見合い1回 別途費用</li>
-        <li>外国人会員：月額 27,500円（税込）／お見合い1回 8,800円（税込）</li>
+        <li>日本人会員：月額 11,000円（税込）／お見合い・カウンセリング 1回 3,300円（税込）</li>
+        <li>外国人会員：月額 11,000円（税込）／お見合い・カウンセリング 1回 5,500円（税込）</li>
         <li>語学レッスン（英語・日本語）：要相談（週1・週2／50分プラン）</li>
         <li>占い鑑定・パワーストーン販売：鑑定内容・商品により異なる</li>
       </ul>

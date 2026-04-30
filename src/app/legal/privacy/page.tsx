@@ -3,12 +3,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "プライバシーポリシー｜RABBIT",
   description:
-    "オンライン結婚相談所 RABBIT のプライバシーポリシー (個人情報保護方針) です。",
+    "結婚相談所 RABBIT のプライバシーポリシー (個人情報保護方針) です。",
   alternates: { canonical: "/legal/privacy/" },
   robots: { index: true, follow: false },
   openGraph: {
     title: "プライバシーポリシー｜RABBIT",
-    description: "オンライン結婚相談所 RABBIT のプライバシーポリシー。",
+    description: "結婚相談所 RABBIT のプライバシーポリシー。",
     type: "article",
   },
 };
@@ -24,7 +24,7 @@ const sections: Section[] = [
     title: "1. 事業者情報",
     body: (
       <ul className="space-y-1">
-        <li>事業者名：オンライン結婚相談所 RABBIT</li>
+        <li>事業者名：結婚相談所 RABBIT (オンライン対応)</li>
         <li>運営統括責任者：SHIN</li>
         <li>所在地：沖縄県 {TODO("市区町村以下の詳細住所")}</li>
         <li>お問い合わせ窓口：本ポリシー末尾の窓口情報を参照</li>
@@ -172,7 +172,7 @@ export default function PrivacyPage() {
         <p className="text-xs tracking-[0.3em] text-rose-primary uppercase">Legal</p>
         <h1 className="mt-2 font-serif text-3xl sm:text-4xl text-ink">プライバシーポリシー</h1>
         <p className="mt-4 text-sm text-stone-600 leading-relaxed">
-          オンライン結婚相談所 RABBIT (以下「当社」) は、お客様の個人情報の保護を重要な責務と認識し、
+          結婚相談所 RABBIT (以下「当社」) は、お客様の個人情報の保護を重要な責務と認識し、
           個人情報の保護に関する法律その他関係法令を遵守のうえ、以下のとおり取り扱います。
         </p>
       </header>

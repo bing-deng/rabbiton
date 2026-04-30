@@ -11,9 +11,11 @@ export const SITE_URL = raw.replace(/\/$/, "");
 
 export const SITE = {
   name: "RABBIT",
-  legalName: "オンライン結婚相談所 RABBIT",
+  legalName: "結婚相談所 RABBIT",
+  // Surfaced as alternateName in JSON-LD so both queries hit.
+  aliasName: "オンライン結婚相談所 RABBIT",
   description:
-    "夫婦で運営するオンライン結婚相談所 RABBIT。国内・国際結婚のお見合いから、語学レッスン、占い鑑定まで、あなたの一歩をあたたかくサポートします。",
+    "夫婦で運営する結婚相談所 RABBIT。国内・国際結婚のお見合いから、語学レッスン、占い鑑定まで、オンラインであたたかくサポートします。",
   locale: "ja_JP",
   alternates: ["en_US", "zh_CN"],
   url: SITE_URL,
