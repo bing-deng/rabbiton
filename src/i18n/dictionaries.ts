@@ -119,7 +119,7 @@ export type Dictionary = {
 
 const ja: Dictionary = {
   meta: {
-    title: "RABBIT｜オンライン結婚相談所 — 国際結婚・語学・占いまで寄り添う",
+    title: "結婚相談所 RABBIT — 国際結婚・語学・占いまで寄り添う",
     description:
       "夫婦で運営するオンライン結婚相談所 RABBIT。国内・国際結婚のお見合いから、語学レッスン、占い鑑定まで。あなたの一歩をあたたかくサポートします。",
   },
