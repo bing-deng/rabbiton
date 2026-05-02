@@ -8,8 +8,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: "*",
-        allow: "/",
-        // Underscore-prefixed paths are Next.js internals; not for crawlers.
+        allow: ["/", "/_next/static/"],
         disallow: ["/_next/"],
       },
     ],
