@@ -75,7 +75,11 @@
       "Bash(npm --prefix /Users/dengbingbing/Documents/startup-deng/landing-page/rabbiton run build)",
       "Bash(lsof -ti:3005 -ti:3001)",
       "Bash(xargs -r kill)",
-      "Bash(PORT=3006 npm *)"
+      "Bash(PORT=3006 npm *)",
+      "Bash(git *)",
+      "Bash(bash *)",
+      "Bash(curl -sIL https://rabbiton.pages.dev/ -A \"Mozilla/5.0\")",
+      "Bash(ping -c 1 rabbiton.pages.dev)"
     ]
   }
 }
