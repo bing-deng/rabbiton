@@ -27,6 +27,8 @@ export type Dictionary = {
     coupleTag: string;
     fortuneBadge: string;
     fortuneTag: string;
+    campaignEyebrow: string;
+    campaigns: { title: string; body: string }[];
   };
   audience: {
     eyebrow: string;
@@ -54,6 +56,19 @@ export type Dictionary = {
     requestLabel: string;
     badge: string;
     note: string;
+    payment: {
+      title: string;
+      lead: string;
+      groups: { title: string; methods: string[] }[];
+    };
+    language: {
+      eyebrow: string;
+      title: string;
+      lead: string;
+      childNote: string;
+      headers: { plan: string; adult: string; child: string };
+      rows: { lesson: string; frequency: string; adult: string; child: string }[];
+    };
     plans: {
       name: string;
       caption: string;
@@ -151,6 +166,17 @@ const ja: Dictionary = {
     coupleTag: "夫婦で運営",
     fortuneBadge: "Fortune Telling",
     fortuneTag: "しん先生 在籍",
+    campaignEyebrow: "Campaign",
+    campaigns: [
+      {
+        title: "結婚相談所",
+        body: "本登録後、初月会費無料キャンペーン",
+      },
+      {
+        title: "語学レッスン",
+        body: "30分無料お試しレッスンあり。語学レッスンのみの受講も可能です。",
+      },
+    ],
   },
   audience: {
     eyebrow: "For You",
@@ -187,7 +213,8 @@ const ja: Dictionary = {
         points: [
           "英語レッスン / 日本語レッスン",
           "週1プラン・週2プラン (50分)",
-          "独学で日常会話を習得した講師による指導",
+          "18歳以下のお子さま向けレッスン対応あり",
+          "語学レッスンのみの受講も可能",
           "国際恋愛・異文化コミュニケーション対応",
         ],
       },
@@ -215,6 +242,27 @@ const ja: Dictionary = {
     requestLabel: "要相談",
     badge: "Most Recommended",
     note: "※ 価格は変更になる場合がございます。最新の詳細は無料相談にてご確認ください。",
+    payment: {
+      title: "Payment Methods（支払い方法）",
+      lead: "お住まいの地域に合わせて、下記のお支払い方法をご利用いただけます。",
+      groups: [
+        { title: "外国籍・海外のお客様向け", methods: ["PayPal", "Wise"] },
+        { title: "日本国内のお客様向け", methods: ["PayPay", "銀行振込"] },
+      ],
+    },
+    language: {
+      eyebrow: "Language Lesson Fees",
+      title: "語学レッスンプラン・料金",
+      lead: "英会話・日本語レッスンは、結婚相談所への入会なしでも受講可能です。料金はすべて税込です。",
+      childNote: "18歳以下のお子さま向けレッスンにも対応しています。",
+      headers: { plan: "レッスン / 回数", adult: "大人", child: "子ども（18歳以下）" },
+      rows: [
+        { lesson: "英会話レッスン", frequency: "週1回（月4回）", adult: "8,800円", child: "5,500円" },
+        { lesson: "英会話レッスン", frequency: "週2回（月8回）", adult: "15,400円", child: "9,900円" },
+        { lesson: "日本語レッスン", frequency: "週1回（月4回）", adult: "11,000円", child: "8,800円" },
+        { lesson: "日本語レッスン", frequency: "週2回（月8回）", adult: "19,800円", child: "15,500円" },
+      ],
+    },
     plans: [
       {
         name: "日本人会員",
@@ -247,9 +295,9 @@ const ja: Dictionary = {
       {
         name: "語学レッスン",
         caption: "英語・日本語に触れたい方に",
-        monthly: "要相談",
+        monthly: "8,800",
         perMatch: "週1 / 週2 (50分)",
-        features: ["英語レッスン", "日本語レッスン", "初心者向けコースあり", "しん先生以外の講師も在籍"],
+        features: ["英語レッスン 8,800円〜", "日本語レッスン 11,000円〜", "18歳以下のお子さま対応", "30分無料お試しレッスンあり"],
         cta: "レッスンを体験する",
         highlight: false,
       },
@@ -398,6 +446,17 @@ const en: Dictionary = {
     coupleTag: "Run by a couple",
     fortuneBadge: "Fortune Telling",
     fortuneTag: "Shin-sensei on team",
+    campaignEyebrow: "Campaign",
+    campaigns: [
+      {
+        title: "Marriage agency",
+        body: "First monthly fee is free after full registration.",
+      },
+      {
+        title: "Language lessons",
+        body: "Free 30-minute trial lesson available. Language lessons can be taken on their own.",
+      },
+    ],
   },
   audience: {
     eyebrow: "For You",
@@ -434,7 +493,8 @@ const en: Dictionary = {
         points: [
           "English / Japanese lessons",
           "Weekly or twice-weekly (50 min)",
-          "Taught by someone who learned conversational English in ~6 months",
+          "Lessons available for children 18 and under",
+          "Language lessons can be taken on their own",
           "Supports intercultural dating too",
         ],
       },
@@ -462,6 +522,27 @@ const en: Dictionary = {
     requestLabel: "On request",
     badge: "Most Recommended",
     note: "* Prices may change. Please confirm the latest details in your free consultation.",
+    payment: {
+      title: "Payment Methods",
+      lead: "Choose the payment option that best fits your location.",
+      groups: [
+        { title: "For international and overseas customers", methods: ["PayPal", "Wise"] },
+        { title: "For customers in Japan", methods: ["PayPay", "Bank transfer"] },
+      ],
+    },
+    language: {
+      eyebrow: "Language Lesson Fees",
+      title: "Language lesson plans and fees",
+      lead: "English and Japanese lessons are also available without joining the marriage agency. All prices include tax.",
+      childNote: "Lessons are available for children 18 and under.",
+      headers: { plan: "Lesson / frequency", adult: "Adult", child: "Child (18 and under)" },
+      rows: [
+        { lesson: "English Lesson", frequency: "Once a week (4/month)", adult: "¥8,800", child: "¥5,500" },
+        { lesson: "English Lesson", frequency: "Twice a week (8/month)", adult: "¥15,400", child: "¥9,900" },
+        { lesson: "Japanese Lesson", frequency: "Once a week (4/month)", adult: "¥11,000", child: "¥8,800" },
+        { lesson: "Japanese Lesson", frequency: "Twice a week (8/month)", adult: "¥19,800", child: "¥15,500" },
+      ],
+    },
     plans: [
       {
         name: "Japan Member",
@@ -494,9 +575,9 @@ const en: Dictionary = {
       {
         name: "Language Lessons",
         caption: "For those who love languages",
-        monthly: "On request",
+        monthly: "8,800",
         perMatch: "Weekly / twice-weekly (50 min)",
-        features: ["English lessons", "Japanese lessons", "Beginner course available", "Multiple teachers besides Shin-sensei"],
+        features: ["English from ¥8,800", "Japanese from ¥11,000", "Children 18 and under supported", "Free 30-minute trial"],
         cta: "Try a lesson",
         highlight: false,
       },
@@ -643,6 +724,17 @@ const zh: Dictionary = {
     coupleTag: "夫妻共同经营",
     fortuneBadge: "Fortune Telling",
     fortuneTag: "有 Shin 老师坐镇",
+    campaignEyebrow: "Campaign",
+    campaigns: [
+      {
+        title: "婚姻介绍所",
+        body: "正式注册后，首月月费免费。",
+      },
+      {
+        title: "语言课程",
+        body: "提供30分钟免费体验课。也可以只报名语言课程。",
+      },
+    ],
   },
   audience: {
     eyebrow: "For You",
@@ -679,7 +771,8 @@ const zh: Dictionary = {
         points: [
           "英语课程 / 日语课程",
           "每周1次或2次（50分钟）",
-          "老师本人约半年自学出日常英语",
+          "支持18岁以下儿童课程",
+          "也可以只报名语言课程",
           "支持跨国恋爱与跨文化沟通",
         ],
       },
@@ -707,6 +800,27 @@ const zh: Dictionary = {
     requestLabel: "洽询",
     badge: "Most Recommended",
     note: "※ 价格可能调整，最新详情请于免费咨询时确认。",
+    payment: {
+      title: "Payment Methods（支付方式）",
+      lead: "可根据您所在地区选择合适的支付方式。",
+      groups: [
+        { title: "外籍・海外客户", methods: ["PayPal", "Wise"] },
+        { title: "日本国内客户", methods: ["PayPay", "银行转账"] },
+      ],
+    },
+    language: {
+      eyebrow: "Language Lesson Fees",
+      title: "语言课程方案・费用",
+      lead: "英语和日语课程无需加入婚姻介绍所，也可以单独报名。价格均已含税。",
+      childNote: "支持18岁以下儿童课程。",
+      headers: { plan: "课程 / 次数", adult: "大人", child: "儿童（18岁以下）" },
+      rows: [
+        { lesson: "英语课程", frequency: "每周1次（月4次）", adult: "8,800日元", child: "5,500日元" },
+        { lesson: "英语课程", frequency: "每周2次（月8次）", adult: "15,400日元", child: "9,900日元" },
+        { lesson: "日语课程", frequency: "每周1次（月4次）", adult: "11,000日元", child: "8,800日元" },
+        { lesson: "日语课程", frequency: "每周2次（月8次）", adult: "19,800日元", child: "15,500日元" },
+      ],
+    },
     plans: [
       {
         name: "日本会员",
@@ -729,9 +843,9 @@ const zh: Dictionary = {
       {
         name: "语言课程",
         caption: "想接触英语・日语的您",
-        monthly: "洽询",
+        monthly: "8,800",
         perMatch: "每周1 / 每周2 (50分钟)",
-        features: ["英语课程", "日语课程", "初学者课程", "除 Shin 老师外还有其他讲师"],
+        features: ["英语课程 8,800日元起", "日语课程 11,000日元起", "支持18岁以下儿童", "30分钟免费体验课"],
         cta: "预约体验课程",
         highlight: false,
       },

@@ -30,6 +30,27 @@ export default function Hero() {
             {h.lead}
           </p>
 
+          <div className="mt-7 max-w-2xl rounded-3xl border border-rose-primary/20 bg-white/85 p-4 shadow-lg shadow-rose-primary/10 backdrop-blur">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-rose-primary">
+              {h.campaignEyebrow}
+            </p>
+            <div className="mt-3 grid gap-3 sm:grid-cols-2">
+              {h.campaigns.map((campaign) => (
+                <div
+                  key={campaign.title}
+                  className="rounded-2xl bg-rose-blush/60 px-4 py-3 ring-1 ring-rose-soft/70"
+                >
+                  <p className="text-xs font-semibold text-rose-deep">
+                    {campaign.title}
+                  </p>
+                  <p className="mt-1 text-sm font-medium leading-relaxed text-ink">
+                    {campaign.body}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
           <div className="mt-9 flex flex-col sm:flex-row gap-3">
             <a
               href={EXTERNAL_LINKS.contactForm}
