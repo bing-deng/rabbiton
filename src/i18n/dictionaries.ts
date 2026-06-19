@@ -170,7 +170,7 @@ const ja: Dictionary = {
     ctaPrimary: "無料相談を申し込む",
     ctaSecondary: "サービスを見る",
     stats: [
-      { num: "月3名〜", label: "ご紹介人数" },
+      { num: "月5名〜", label: "ご紹介人数" },
       { num: "夫婦", label: "二人体制で伴走" },
       { num: "国際", label: "結婚にも対応" },
     ],
@@ -210,7 +210,7 @@ const ja: Dictionary = {
     lead:
       "結婚も、語学も、占いも——「一歩が踏み出せない」気持ちに、わたしたちは真剣に向き合います。",
     items: [
-      { title: "結婚したいけれど、出会いがない", body: "お仕事や生活の中で出会いが広がらない方へ。ひとりに合うお相手を月3名〜ご紹介。" },
+      { title: "結婚したいけれど、出会いがない", body: "お仕事や生活の中で出会いが広がらない方へ。ひとりに合うお相手を月5名〜ご紹介。" },
       { title: "外国の方と話してみたい", body: "国際結婚・異文化恋愛に関心のある方を、文化の違いも踏まえて丁寧にサポート。" },
       { title: "恋愛・人生の悩みを相談したい", body: "経験豊富な占い師しん先生が、現実的な視点から人生の選択に寄り添います。" },
       { title: "趣味として語学を楽しみたい", body: "英語・日本語レッスンを週1/週2プランで。日常会話から国際恋愛まで。" },
@@ -229,7 +229,7 @@ const ja: Dictionary = {
         tag: "Marriage",
         title: "結婚相談・お見合いサポート",
         lead: "日本人・外国人、どちらの会員にも対応。一人ひとりの出会いを大切に。",
-        points: ["月3名〜のお相手紹介", "お見合い・カウンセリング", "国際結婚にも対応", "夫婦二人体制で安心"],
+        points: ["月5名〜のお相手紹介", "お見合い・カウンセリング", "国際結婚にも対応", "夫婦二人体制で安心"],
       },
       {
         tag: "Language",
@@ -463,7 +463,7 @@ const en: Dictionary = {
     ctaPrimary: "Book a free consult",
     ctaSecondary: "See services",
     stats: [
-      { num: "3+/mo", label: "Introductions" },
+      { num: "5+/mo", label: "Introductions" },
       { num: "Couple", label: "Dual-perspective support" },
       { num: "Global", label: "Intl. marriage ready" },
     ],
@@ -503,7 +503,7 @@ const en: Dictionary = {
     lead:
       "Marriage, languages, or fortune — when you can't take that first step, we take it seriously alongside you.",
     items: [
-      { title: "I want to marry but have no opportunities", body: "For those whose daily life rarely leads to meeting new people. We introduce 3+ matches a month, chosen carefully for you." },
+      { title: "I want to marry but have no opportunities", body: "For those whose daily life rarely leads to meeting new people. We introduce 5+ matches a month, chosen carefully for you." },
       { title: "I'd love to talk with someone from abroad", body: "We warmly support those drawn to intercultural relationships and international marriage." },
       { title: "I need someone to hear my worries", body: "Our seasoned fortune-teller Shin-sensei offers grounded, practical advice for love and life." },
       { title: "I want to enjoy languages as a hobby", body: "English and Japanese lessons in weekly or twice-weekly plans — from small talk to intercultural love." },
@@ -522,7 +522,7 @@ const en: Dictionary = {
         tag: "Marriage",
         title: "Matchmaking & introductions",
         lead: "For Japanese and international members alike. Every encounter is treated with care.",
-        points: ["3+ matches per month", "Meetings & counseling", "International marriage ready", "Two-person couple support"],
+        points: ["5+ matches per month", "Meetings & counseling", "International marriage ready", "Two-person couple support"],
       },
       {
         tag: "Language",
@@ -754,7 +754,7 @@ const zh: Dictionary = {
     ctaPrimary: "预约免费咨询",
     ctaSecondary: "查看服务",
     stats: [
-      { num: "每月3位+", label: "会员介绍" },
+      { num: "每月5位+", label: "会员介绍" },
       { num: "夫妻", label: "双视角陪伴" },
       { num: "国际", label: "国际婚姻可" },
     ],
@@ -793,7 +793,7 @@ const zh: Dictionary = {
     lead:
       "无论是婚姻、语言，还是占卜——「迈不出第一步」的心情，我们愿意认真对待。",
     items: [
-      { title: "想结婚，却缺少相遇的机会", body: "为在日常生活中难以拓展人脉的您，每月精心挑选3位以上合适人选。" },
+      { title: "想结婚，却缺少相遇的机会", body: "为在日常生活中难以拓展人脉的您，每月精心挑选5位以上合适人选。" },
       { title: "想和外国朋友聊聊天", body: "对国际婚姻或跨文化恋爱感兴趣？我们会考虑到文化差异，细心地陪伴您。" },
       { title: "想找人聊聊人生或恋爱的烦恼", body: "资深占卜师 Shin 老师以务实的视角，为您的人生选择一同思考。" },
       { title: "想把语言当成兴趣来学", body: "英语/日语课程，每周1次或2次（每次50分钟），从日常对话到跨国恋爱都能照顾到。" },
@@ -812,7 +812,7 @@ const zh: Dictionary = {
         tag: "Marriage",
         title: "婚姻介绍・相亲支持",
         lead: "日本会员与外国会员都能对应。用心对待每一次相遇。",
-        points: ["每月3位以上会员介绍", "相亲与一对一咨询", "支持国际婚姻", "夫妻二人共同陪伴"],
+        points: ["每月5位以上会员介绍", "相亲与一对一咨询", "支持国际婚姻", "夫妻二人共同陪伴"],
       },
       {
         tag: "Language",
