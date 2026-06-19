@@ -30,6 +30,18 @@ export type Dictionary = {
     campaignEyebrow: string;
     campaigns: { title: string; body: string }[];
   };
+  campaignBanner: {
+    eyebrow: string;
+    title: string;
+    alt: string;
+  };
+  flow: {
+    eyebrow: string;
+    titleA: string;
+    titleAccent: string;
+    lead: string;
+    alt: string;
+  };
   audience: {
     eyebrow: string;
     titleA: string;
@@ -177,6 +189,19 @@ const ja: Dictionary = {
         body: "30分無料お試しレッスンあり。語学レッスンのみの受講も可能です。",
       },
     ],
+  },
+  campaignBanner: {
+    eyebrow: "Campaign",
+    title: "皆様の婚活、絶賛稼働中！",
+    alt: "結婚相談所 RABBIT キャンペーン案内。初月会費無料、男女各 約3,000名の会員、ご入会に必要なもの。",
+  },
+  flow: {
+    eyebrow: "Flow",
+    titleA: "ご入会・活動までの",
+    titleAccent: "5つのステップ",
+    lead:
+      "ご相談予約から成婚まで、流れはとてもシンプル。はじめての方も安心してご相談ください。",
+    alt: "結婚相談所 RABBIT 登録の流れ。01 ご相談予約、02 無料相談、03 ご入会手続き、04 活動スタート、05 ご成婚へ。",
   },
   audience: {
     eyebrow: "For You",
@@ -458,6 +483,19 @@ const en: Dictionary = {
       },
     ],
   },
+  campaignBanner: {
+    eyebrow: "Campaign",
+    title: "Matchmaking in full swing",
+    alt: "RABBIT Marriage Agency campaign: first monthly fee free, around 3,000 members each for men and women, and what you need to join.",
+  },
+  flow: {
+    eyebrow: "Flow",
+    titleA: "Five simple steps",
+    titleAccent: " to getting started",
+    lead:
+      "From your first consultation to a happy marriage, the journey is simple. First-timers are warmly welcome.",
+    alt: "RABBIT Marriage Agency registration flow: 01 book a consultation, 02 free consultation, 03 enrollment, 04 start activity, 05 marriage.",
+  },
   audience: {
     eyebrow: "For You",
     titleA: "We stand",
@@ -735,6 +773,18 @@ const zh: Dictionary = {
         body: "提供30分钟免费体验课。也可以只报名语言课程。",
       },
     ],
+  },
+  campaignBanner: {
+    eyebrow: "Campaign",
+    title: "婚恋活动，正在火热进行中！",
+    alt: "RABBIT 婚介所活动介绍：首月会费免费，男女会员各约3,000名，以及入会所需材料。",
+  },
+  flow: {
+    eyebrow: "Flow",
+    titleA: "入会与活动的",
+    titleAccent: "5个步骤",
+    lead: "从咨询预约到成婚，流程非常简单。初次了解的您也可以放心咨询。",
+    alt: "RABBIT 婚介所登记流程：01 咨询预约、02 免费咨询、03 入会手续、04 开始活动、05 迈向成婚。",
   },
   audience: {
     eyebrow: "For You",
