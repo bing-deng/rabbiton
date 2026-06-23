@@ -338,11 +338,11 @@ const ja: Dictionary = {
       "私たちは夫婦で運営する結婚相談所です。国内結婚だけでなく、国際結婚を希望する方にも一人ひとりに寄り添ったサポートを提供しています。",
     members: [
       {
-        role: "代表 / 占い鑑定士",
+        role: "代表 / 占い鑑定士 / カウンセラー",
         name: "SHIN",
         initials: "S",
         bio:
-          "15年以上にわたり経営に携わり、東京で複数の飲食事業を運営。過去には歌舞伎町のホストクラブにて「柊凪沙」として活動し、グループ会長も務める。現在は沖縄に拠点を移し、占いの的中だけでなく経験と知識に基づく現実的なアドバイスでお悩み解決をサポート。パワーストーンの販売も行う。",
+          "25歳で法人を設立し、現在37歳。経営者として15年以上活動しています。私自身、離婚と再婚の両方を経験し、現在は二児の父として子育てにも奮闘中です。恋愛や結婚は理想だけではなく、実際の生活も大切です。だからこそ、占い師としての視点だけでなく、一人の夫として、父親としての経験も活かしながらアドバイスを行っています。「幸せな結婚とは何か」を一緒に考えながら、あなたらしいご縁探しをサポートいたします。",
         tags: ["占い", "人生相談", "事業経営"],
         image: "/rabbit/shin.png",
       },
@@ -631,11 +631,11 @@ const en: Dictionary = {
       "We are a couple-run marriage agency. Whether domestic or international, we provide support tailored to each individual.",
     members: [
       {
-        role: "Owner / Fortune-teller",
+        role: "Owner / Fortune-teller / Counselor",
         name: "SHIN",
         initials: "S",
         bio:
-          "Over 15 years of business experience, including running multiple restaurants in Tokyo. Formerly active in Kabukichō as 'Hiiragi Nagisa', also serving as group chairwoman. Now based in Okinawa, providing not only accurate readings but practical advice grounded in experience. Also sells power stones.",
+          "I founded a company at 25 and am now 37, with over 15 years of experience as a business owner. Having personally been through both divorce and remarriage, I'm now a father of two, fully immersed in raising my children. Love and marriage aren't only about ideals—everyday life matters just as much. That's why I offer advice drawing not only on my perspective as a fortune-teller, but also on my experience as a husband and a father. Together we'll think about what a happy marriage truly means, and I'll support you in finding the connection that's right for you.",
         tags: ["Fortune", "Life advice", "Business"],
         image: "/rabbit/shin.png",
       },
@@ -911,11 +911,11 @@ const zh: Dictionary = {
       "我们是一家由夫妻共同经营的婚姻介绍所。不论国内或国际婚姻，都为每一位量身陪伴。",
     members: [
       {
-        role: "代表 / 占卜鉴定士",
+        role: "代表 / 占卜鉴定士 / 咨询师",
         name: "SHIN",
         initials: "S",
         bio:
-          "15年以上经营经验，曾在东京经营多家餐饮。过去以「柊凪沙」之名在歌舞伎町 Host Club 活动，担任过集团会长。目前以冲绳为据点，以占卜之精准为基础，以经验与知识为血肉，提供可执行的现实建议，也贩售能量石。",
+          "25岁创立法人公司，现年37岁，作为经营者已活跃15年以上。我本人经历过离婚与再婚，如今身为两个孩子的父亲，也正为育儿全力以赴。恋爱与婚姻不只关乎理想，现实生活同样重要。正因如此，我不仅以占卜师的视角，也结合自己作为丈夫、作为父亲的经验来提供建议。让我们一起思考「何为幸福的婚姻」，陪伴你寻找属于你的良缘。",
         tags: ["占卜", "人生咨询", "事业经营"],
         image: "/rabbit/shin.png",
       },
