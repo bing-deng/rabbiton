@@ -1,15 +1,19 @@
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { LanguageProvider } from "@/i18n/LanguageProvider";
 
+// Legal pages (privacy, tokushoho) are Japanese-only, so the shared Navbar/Footer
+// read from the JA dictionary.
 export default function LegalLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <>
+    <LanguageProvider lang="ja">
       <Navbar />
       <main className="bg-paper">
         <div className="max-w-3xl mx-auto px-5 sm:px-8 py-20">
-          <a
+          <Link
             href="/"
             className="inline-flex items-center gap-1 text-sm text-stone-500 hover:text-rose-deep transition-colors"
           >
@@ -17,13 +21,13 @@ export default function LegalLayout({
               <path d="M19 12H5M12 19l-7-7 7-7" />
             </svg>
             トップへ戻る / Back
-          </a>
+          </Link>
           <article className="mt-8 bg-white rounded-3xl border border-stone-100 p-8 sm:p-12 shadow-sm">
             {children}
           </article>
         </div>
       </main>
       <Footer />
-    </>
+    </LanguageProvider>
   );
 }

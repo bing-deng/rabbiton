@@ -1,12 +1,14 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { useI18n } from "@/i18n/LanguageProvider";
 import type { Lang } from "@/i18n/dictionaries";
+import { LOCALE_PATHS } from "@/lib/site";
 
-const options: { code: Lang; label: string; short: string }[] = [
-  { code: "ja", label: "日本語", short: "JA" },
-  { code: "en", label: "English", short: "EN" },
-  { code: "zh", label: "中文", short: "ZH" },
+const options: { code: Lang; label: string; short: string; href: string }[] = [
+  { code: "ja", label: "日本語", short: "JA", href: LOCALE_PATHS.ja },
+  { code: "en", label: "English", short: "EN", href: LOCALE_PATHS.en },
+  { code: "zh", label: "中文", short: "ZH", href: LOCALE_PATHS.zh },
 ];
 
 export default function LanguageSwitcher({
@@ -14,7 +16,7 @@ export default function LanguageSwitcher({
 }: {
   variant?: "light" | "dark";
 }) {
-  const { lang, setLang } = useI18n();
+  const { lang } = useI18n();
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -82,12 +84,11 @@ export default function LanguageSwitcher({
           const isActive = o.code === lang;
           return (
             <li key={o.code}>
-              <button
-                type="button"
-                onClick={() => {
-                  setLang(o.code);
-                  setOpen(false);
-                }}
+              <Link
+                href={o.href}
+                hrefLang={o.code}
+                onClick={() => setOpen(false)}
+                aria-current={isActive ? "true" : undefined}
                 className={`w-full flex items-center justify-between px-4 py-2.5 text-left transition-colors ${
                   isActive
                     ? "bg-rose-blush text-rose-deep"
@@ -100,7 +101,7 @@ export default function LanguageSwitcher({
                 <span className="text-[10px] tracking-widest text-stone-400">
                   {o.short}
                 </span>
-              </button>
+              </Link>
             </li>
           );
         })}

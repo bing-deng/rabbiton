@@ -1,75 +1,30 @@
 "use client";
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from "react";
-import {
-  DEFAULT_LANG,
-  DICTIONARIES,
-  type Dictionary,
-  type Lang,
-  SUPPORTED_LANGS,
-  detectBrowserLang,
-} from "./dictionaries";
-
-const STORAGE_KEY = "rabbit-lang";
+import { createContext, useContext, useEffect, useMemo } from "react";
+import { DICTIONARIES, type Dictionary, type Lang } from "./dictionaries";
 
 type Ctx = {
   lang: Lang;
-  setLang: (next: Lang) => void;
   t: Dictionary;
-  ready: boolean;
 };
 
 const I18nContext = createContext<Ctx | null>(null);
 
-export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [lang, setLangState] = useState<Lang>(DEFAULT_LANG);
-  const [ready, setReady] = useState(false);
-
+// Each locale route (/, /en/, /zh/) renders its own prerendered HTML, so the
+// language is fixed by the route rather than toggled client-side. The provider
+// just exposes the dictionary for that route's language.
+export function LanguageProvider({
+  lang,
+  children,
+}: {
+  lang: Lang;
+  children: React.ReactNode;
+}) {
+  // Keep <html lang> in sync on the client (the static shell ships lang="ja").
   useEffect(() => {
-    try {
-      const stored = window.localStorage.getItem(STORAGE_KEY);
-      if (stored && (SUPPORTED_LANGS as readonly string[]).includes(stored)) {
-        setLangState(stored as Lang);
-      } else {
-        setLangState(detectBrowserLang(navigator.language));
-      }
-    } catch {
-      setLangState(DEFAULT_LANG);
-    } finally {
-      setReady(true);
-    }
-  }, []);
+    document.documentElement.lang = lang;
+  }, [lang]);
 
-  useEffect(() => {
-    if (ready) {
-      document.documentElement.lang = lang;
-    }
-  }, [lang, ready]);
-
-  const setLang = useCallback((next: Lang) => {
-    setLangState(next);
-    try {
-      window.localStorage.setItem(STORAGE_KEY, next);
-    } catch {
-      /* ignore storage failures */
-    }
-  }, []);
-
-  const value = useMemo<Ctx>(
-    () => ({
-      lang,
-      setLang,
-      t: DICTIONARIES[lang],
-      ready,
-    }),
-    [lang, setLang, ready],
-  );
+  const value = useMemo<Ctx>(() => ({ lang, t: DICTIONARIES[lang] }), [lang]);
 
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
 }

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP, Noto_Serif_JP, Noto_Sans_SC, Noto_Serif_SC } from "next/font/google";
 import "./globals.css";
-import { LanguageProvider } from "@/i18n/LanguageProvider";
 import { SITE, SITE_URL } from "@/lib/site";
 
 const notoSansJP = Noto_Sans_JP({
@@ -32,21 +31,15 @@ const notoSerifSC = Noto_Serif_SC({
   display: "swap",
 });
 
-const TITLE = "結婚相談所 RABBIT｜国際結婚・語学・占いまで寄り添うオンライン婚活";
-const SHORT_TITLE = "結婚相談所 RABBIT";
-
+// Base metadata shared by every route. Each locale homepage overrides the
+// language-specific fields (title/description/canonical/hreflang/OG) via
+// buildMetadata(); legal pages provide their own. Only truly global bits live
+// here so they don't have to be repeated per route.
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: TITLE,
+  title: SITE.legalName,
   description: SITE.description,
   applicationName: SITE.legalName,
-  keywords: SITE.keywords,
-  authors: [{ name: SITE.legalName, url: SITE_URL }],
-  creator: SITE.legalName,
-  publisher: SITE.legalName,
-  alternates: {
-    canonical: "/",
-  },
   verification: {
     google: "_4G9HxNz9Di1xHeoFa5cr0xjiziujnPI0OAb5QInyv0",
   },
@@ -60,20 +53,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
       "max-video-preview": -1,
     },
-  },
-  openGraph: {
-    type: "website",
-    locale: SITE.locale,
-    alternateLocale: SITE.alternates,
-    url: SITE_URL,
-    siteName: SITE.legalName,
-    title: SHORT_TITLE,
-    description: SITE.description,
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: SHORT_TITLE,
-    description: SITE.description,
   },
   category: "matchmaking",
 };
@@ -181,7 +160,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col bg-[#fdf7f2] text-stone-800">
-        <LanguageProvider>{children}</LanguageProvider>
+        {children}
       </body>
     </html>
   );

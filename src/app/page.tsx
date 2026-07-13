@@ -1,33 +1,15 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import CampaignBanner from "@/components/CampaignBanner";
-import Audience from "@/components/Audience";
-import Services from "@/components/Services";
-import Pricing from "@/components/Pricing";
-import Flow from "@/components/Flow";
-import Staff from "@/components/Staff";
-import Testimonials from "@/components/Testimonials";
-import Faq from "@/components/Faq";
-import Cta from "@/components/Cta";
-import Footer from "@/components/Footer";
+import type { Metadata } from "next";
+import HomePage from "@/components/HomePage";
+import { LanguageProvider } from "@/i18n/LanguageProvider";
+import { buildMetadata } from "@/lib/seo";
 
-export default function Home() {
+// Japanese site, served at the root so「結婚相談所RABBIT」keeps ranking here.
+export const metadata: Metadata = buildMetadata("ja");
+
+export default function Page() {
   return (
-    <>
-      <Navbar />
-      <main>
-        <Hero />
-        <CampaignBanner />
-        <Audience />
-        <Services />
-        <Pricing />
-        <Flow />
-        <Staff />
-        <Testimonials />
-        <Faq />
-        <Cta />
-      </main>
-      <Footer />
-    </>
+    <LanguageProvider lang="ja">
+      <HomePage />
+    </LanguageProvider>
   );
 }

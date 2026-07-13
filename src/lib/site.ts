@@ -43,8 +43,34 @@ export const SITE = {
   ],
 };
 
+// URL path for each locale home. `/` stays Japanese so the brand keeps ranking
+// for「結婚相談所RABBIT」; foreign audiences live under /en/ and /zh/.
+export const LOCALE_PATHS = {
+  ja: "/",
+  en: "/en/",
+  zh: "/zh/",
+} as const;
+
+// OpenGraph locale codes per language.
+export const OG_LOCALE = {
+  ja: "ja_JP",
+  en: "en_US",
+  zh: "zh_CN",
+} as const;
+
+// hreflang map shared by every locale page so search engines can pair the
+// right language/region with the right URL. x-default points at the JA root.
+export const HREFLANG_ALTERNATES: Record<string, string> = {
+  ja: LOCALE_PATHS.ja,
+  en: LOCALE_PATHS.en,
+  zh: LOCALE_PATHS.zh,
+  "x-default": LOCALE_PATHS.ja,
+};
+
 export const PAGES = [
-  { path: "/", priority: 1.0, changeFreq: "weekly" as const },
+  { path: LOCALE_PATHS.ja, priority: 1.0, changeFreq: "weekly" as const },
+  { path: LOCALE_PATHS.en, priority: 0.9, changeFreq: "weekly" as const },
+  { path: LOCALE_PATHS.zh, priority: 0.9, changeFreq: "weekly" as const },
   { path: "/legal/privacy/", priority: 0.3, changeFreq: "yearly" as const },
   { path: "/legal/tokushoho/", priority: 0.3, changeFreq: "yearly" as const },
 ];
