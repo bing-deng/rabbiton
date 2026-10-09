@@ -46,6 +46,11 @@ export default function Hero() {
                   <p className="mt-1 text-sm font-medium leading-relaxed text-ink">
                     {campaign.body}
                   </p>
+                  {campaign.description && (
+                    <p className="mt-3 text-sm leading-relaxed text-stone-600">
+                      {campaign.description}
+                    </p>
+                  )}
                 </div>
               ))}
             </div>

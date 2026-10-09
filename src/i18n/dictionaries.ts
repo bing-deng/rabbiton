@@ -28,7 +28,7 @@ export type Dictionary = {
     fortuneBadge: string;
     fortuneTag: string;
     campaignEyebrow: string;
-    campaigns: { title: string; body: string }[];
+    campaigns: { title: string; body: string; description?: string }[];
   };
   campaignBanner: {
     eyebrow: string;
@@ -63,6 +63,7 @@ export type Dictionary = {
     titleAccent: string;
     titleB: string;
     lead: string;
+    valueMessage: string;
     monthSuffix: string;
     perMonth: string;
     requestLabel: string;
@@ -86,6 +87,7 @@ export type Dictionary = {
       caption: string;
       monthly: string;
       perMatch: string;
+      successFee?: string;
       features: string[];
       cta: string;
       highlight: boolean;
@@ -182,7 +184,8 @@ const ja: Dictionary = {
     campaigns: [
       {
         title: "結婚相談所",
-        body: "本登録後、初月会費無料キャンペーン",
+        body: "30分無料の婚活相談 ＋ 本登録後、初月会費無料キャンペーン",
+        description: "サービス内容・料金プラン・婚活の流れを、無料相談で詳しくご案内します。「まずは話を聞いてみたい」という方も大歓迎。ご入会は、じっくりご理解・ご納得いただいてからお決めください。",
       },
       {
         title: "語学レッスン",
@@ -261,7 +264,8 @@ const ja: Dictionary = {
     titleA: "シンプルで、",
     titleAccent: "分かりやすい",
     titleB: "料金",
-    lead: "入会金・成婚料を抑えた、オンライン結婚相談所ならではの料金体系。すべて税込表記です。",
+    lead: "入会時のハードルを低く、初期費用を抑えて、気軽に婚活をスタート。オンライン結婚相談所ならではの料金体系で、費用とサポートのバランスを大切にしています。すべて税込表記です。",
+    valueMessage: "業界最安水準のリーズナブルな料金。ほかの結婚相談所と比べてもお得で、費用対効果の高い婚活を。",
     monthSuffix: "/月",
     perMonth: "¥",
     requestLabel: "要相談",
@@ -294,6 +298,7 @@ const ja: Dictionary = {
         caption: "国内結婚を目指す方に",
         monthly: "11,000",
         perMatch: "お見合い・カウンセリング 3,300円/回",
+        successFee: "日本籍会員の成婚料 165,000円（税込）",
         features: [
           "月額会員費 (税込)",
           "お見合い1回ごとのセッティング",
@@ -308,6 +313,7 @@ const ja: Dictionary = {
         caption: "国際結婚を希望する方に",
         monthly: "11,000",
         perMatch: "お見合い・カウンセリング 5,500円/回",
+        successFee: "外国籍会員の成婚料 220,000円（税込）",
         features: [
           "国際結婚向けカウンセリング",
           "異文化コミュニケーション支援",
@@ -475,7 +481,8 @@ const en: Dictionary = {
     campaigns: [
       {
         title: "Marriage agency",
-        body: "First monthly fee is free after full registration.",
+        body: "Free 30-minute marriage consultation + your first monthly fee free after full registration.",
+        description: "Explore our services, pricing plans, and matchmaking process in a free consultation. Just curious? You are warmly welcome to book. Take your time and decide whether to join once you feel informed and comfortable, with no pressure.",
       },
       {
         title: "Language lessons",
@@ -554,7 +561,8 @@ const en: Dictionary = {
     titleA: "Simple,",
     titleAccent: "easy-to-read",
     titleB: "plans",
-    lead: "Lower entry and success fees, thanks to being online-first. All prices include tax.",
+    lead: "Low initial costs make it easy to join and start your matchmaking journey. Our online service balances affordable fees with personal support. All prices include tax.",
+    valueMessage: "Among the industry’s lowest fee levels, offering excellent value compared with other marriage agencies.",
     monthSuffix: "/mo",
     perMonth: "¥",
     requestLabel: "On request",
@@ -587,6 +595,7 @@ const en: Dictionary = {
         caption: "For those seeking domestic marriage",
         monthly: "11,000",
         perMatch: "Meeting & counseling ¥3,300 / session",
+        successFee: "Success fee for Japanese nationals: ¥165,000 (tax included)",
         features: [
           "Monthly membership fee (tax incl.)",
           "Setup for each meeting",
@@ -601,6 +610,7 @@ const en: Dictionary = {
         caption: "For those seeking international marriage",
         monthly: "11,000",
         perMatch: "Meeting & counseling ¥5,500 / session",
+        successFee: "Success fee for foreign nationals: ¥220,000 (tax included)",
         features: [
           "Intercultural marriage counseling",
           "Cross-cultural communication help",
@@ -766,7 +776,8 @@ const zh: Dictionary = {
     campaigns: [
       {
         title: "婚姻介绍所",
-        body: "正式注册后，首月月费免费。",
+        body: "提供30分钟免费婚恋咨询！正式注册后，首月月费免费。",
+        description: "通过免费咨询，详细了解我们的服务内容、收费方案与婚恋流程。即使只是想先了解一下，也非常欢迎预约。充分了解后再决定是否入会，轻松咨询，没有压力。",
       },
       {
         title: "语言课程",
@@ -844,7 +855,8 @@ const zh: Dictionary = {
     titleA: "简单、",
     titleAccent: "清楚易懂",
     titleB: "的价格",
-    lead: "降低入会费与成婚费，正是线上婚介所独有的方案。价格均已含税。",
+    lead: "入会门槛低、初期费用少，让您轻松开始婚恋活动。线上婚姻介绍所的收费方案，兼顾实惠价格与贴心支持。所有价格均已含税。",
+    valueMessage: "收费处于行业最低水平之一，相比其他婚姻介绍所更加优惠，性价比高。",
     monthSuffix: "/月",
     perMonth: "¥",
     requestLabel: "洽询",
@@ -877,6 +889,7 @@ const zh: Dictionary = {
         caption: "希望在国内结婚的您",
         monthly: "11,000",
         perMatch: "相亲与咨询 ¥3,300/次",
+        successFee: "日本籍会员成婚费 165,000日元（含税）",
         features: ["月度会员费 (含税)", "每次相亲安排", "线上咨询", "契合度分析与资料修订"],
         cta: "咨询此方案",
         highlight: false,
@@ -886,6 +899,7 @@ const zh: Dictionary = {
         caption: "希望国际婚姻的您",
         monthly: "11,000",
         perMatch: "相亲与咨询 ¥5,500/次",
+        successFee: "外国籍会员成婚费 220,000日元（含税）",
         features: ["国际婚姻专属咨询", "跨文化沟通支援", "结识外国会员", "联动语言课程"],
         cta: "国际方案详情",
         highlight: true,

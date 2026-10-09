@@ -15,6 +15,9 @@ export default function Pricing() {
             <span className="text-rose-primary">{p.titleAccent}</span>
             {p.titleB}
           </h2>
+          <p className="mt-5 text-base sm:text-lg font-semibold leading-relaxed text-rose-deep">
+            {p.valueMessage}
+          </p>
           <p className="mt-4 text-stone-600 text-sm sm:text-base leading-relaxed">{p.lead}</p>
         </div>
 
@@ -60,6 +63,11 @@ export default function Pricing() {
                 <p className={`mt-2 text-xs ${plan.highlight ? "text-rose-soft" : "text-rose-primary"}`}>
                   {plan.perMatch}
                 </p>
+                {plan.successFee && (
+                  <p className={`mt-4 rounded-xl px-3 py-3 text-base font-semibold leading-relaxed ${plan.highlight ? "bg-white/10 text-white" : "bg-rose-blush/60 text-rose-deep"}`}>
+                    {plan.successFee}
+                  </p>
+                )}
               </div>
 
               <ul className="mt-6 space-y-3 flex-1">
