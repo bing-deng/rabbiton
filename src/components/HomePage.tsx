@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import CampaignBanner from "@/components/CampaignBanner";
+import IntroVideo from "@/components/IntroVideo";
 import Audience from "@/components/Audience";
 import Services from "@/components/Services";
 import Pricing from "@/components/Pricing";
@@ -20,6 +21,7 @@ export default function HomePage() {
       <main>
         <Hero />
         <CampaignBanner />
+        <IntroVideo />
         <Audience />
         <Services />
         <Pricing />

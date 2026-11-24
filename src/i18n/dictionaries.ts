@@ -35,6 +35,11 @@ export type Dictionary = {
     title: string;
     alt: string;
   };
+  introVideo: {
+    eyebrow: string;
+    title: string;
+    caption: string;
+  };
   flow: {
     eyebrow: string;
     titleA: string;
@@ -197,6 +202,11 @@ const ja: Dictionary = {
     eyebrow: "Campaign",
     title: "皆様の婚活、絶賛稼働中！",
     alt: "結婚相談所 RABBIT キャンペーン案内。初月会費無料、男女各 約3,000名の会員、ご入会に必要なもの。",
+  },
+  introVideo: {
+    eyebrow: "Movie",
+    title: "RABBIT紹介動画",
+    caption: "RABBITの紹介動画（英語・日本語）",
   },
   flow: {
     eyebrow: "Flow",
@@ -495,6 +505,11 @@ const en: Dictionary = {
     title: "Matchmaking in full swing",
     alt: "RABBIT Marriage Agency campaign: first monthly fee free, around 3,000 members each for men and women, and what you need to join.",
   },
+  introVideo: {
+    eyebrow: "Video",
+    title: "Introducing RABBIT",
+    caption: "Introduction video (English / Japanese)",
+  },
   flow: {
     eyebrow: "Flow",
     titleA: "Five simple steps",
@@ -789,6 +804,11 @@ const zh: Dictionary = {
     eyebrow: "Campaign",
     title: "婚恋活动，正在火热进行中！",
     alt: "RABBIT 婚介所活动介绍：首月会费免费，男女会员各约3,000名，以及入会所需材料。",
+  },
+  introVideo: {
+    eyebrow: "视频",
+    title: "RABBIT 介绍视频",
+    caption: "介绍视频（英语／日语）",
   },
   flow: {
     eyebrow: "Flow",
