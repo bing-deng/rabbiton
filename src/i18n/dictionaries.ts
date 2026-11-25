@@ -1,4 +1,4 @@
-export const SUPPORTED_LANGS = ["ja", "en", "zh"] as const;
+export const SUPPORTED_LANGS = ["ja", "en", "zh", "ko"] as const;
 export type Lang = (typeof SUPPORTED_LANGS)[number];
 export const DEFAULT_LANG: Lang = "ja";
 
@@ -1041,7 +1041,307 @@ const zh: Dictionary = {
   },
 };
 
-export const DICTIONARIES: Record<Lang, Dictionary> = { ja, en, zh };
+const ko: Dictionary = {
+  meta: {
+    title: "결혼상담소 RABBIT — 국제결혼・언어・점술까지 함께합니다",
+    description:
+      "부부가 함께 운영하는 온라인 결혼상담소 RABBIT. 국내・국제결혼 중매부터 언어 레슨, 점술 감정까지. 당신의 첫걸음을 따뜻하게 응원합니다.",
+  },
+  nav: {
+    home: "홈",
+    about: "소개",
+    service: "서비스",
+    pricing: "요금제",
+    team: "강사 소개",
+    faq: "자주 묻는 질문",
+    contact: "문의",
+    consult: "무료 상담",
+  },
+  hero: {
+    badge: "결혼상담소 RABBIT",
+    titleA: "당신의 첫걸음에,",
+    titleAccent: "부부가 함께 걷는",
+    titleB: "결혼상담소.",
+    lead:
+      "국내 결혼은 물론 국제결혼・언어・점술까지. \"결혼하고 싶은데 어떻게 해야 할지 모르겠다\" — 그런 마음을 차근차근 현실로 만들어 가는 동행형 서비스입니다.",
+    ctaPrimary: "무료 상담 신청하기",
+    ctaSecondary: "서비스 보기",
+    stats: [
+      { num: "월 5명 이상", label: "소개 인원" },
+      { num: "부부", label: "두 사람이 함께 동행" },
+      { num: "국제", label: "국제결혼 대응" },
+    ],
+    coupleBadge: "Couple Support",
+    coupleTag: "부부가 운영",
+    fortuneBadge: "Fortune Telling",
+    fortuneTag: "신 선생님 소속",
+    campaignEyebrow: "Campaign",
+    campaigns: [
+      {
+        title: "결혼상담소",
+        body: "30분 무료 혼활 상담 + 본등록 후 첫 달 회비 무료 캠페인",
+        description: "서비스 내용・요금제・혼활 과정을 무료 상담에서 자세히 안내해 드립니다. \"먼저 이야기만 들어보고 싶다\"는 분도 환영합니다. 충분히 이해하고 납득하신 뒤에 가입을 결정해 주세요.",
+      },
+      {
+        title: "언어 레슨",
+        body: "30분 무료 체험 레슨 가능. 언어 레슨만 단독으로 수강하실 수도 있습니다.",
+      },
+    ],
+  },
+  campaignBanner: {
+    eyebrow: "Campaign",
+    title: "매칭 진행 중",
+    alt: "RABBIT 결혼상담소 캠페인: 첫 달 회비 무료, 남녀 각 약 3,000명 회원, 가입 조건 안내.",
+  },
+  introVideo: {
+    eyebrow: "Video",
+    title: "RABBIT 소개",
+    caption: "소개 영상 (영어 / 일본어)",
+  },
+  flow: {
+    eyebrow: "Flow",
+    titleA: "간단한 5단계",
+    titleAccent: " 시작하는 방법",
+    lead:
+      "첫 상담부터 행복한 결혼까지, 과정은 간단합니다. 처음이신 분도 편하게 찾아주세요.",
+    alt: "RABBIT 결혼상담소 등록 절차: 01 상담 예약, 02 무료 상담, 03 입회, 04 활동 시작, 05 결혼.",
+  },
+  audience: {
+    eyebrow: "For You",
+    titleA: "우리는",
+    titleAccent: "가까이에서",
+    lead:
+      "결혼, 언어, 점술 — 첫걸음을 떼기 어려울 때, 우리가 진지하게 곁에서 함께합니다.",
+    items: [
+      { title: "결혼하고 싶은데 만날 기회가 없어요", body: "일상에서 새로운 사람을 만날 기회가 적은 분들을 위해. 한 달에 5명 이상, 당신에게 맞는 분을 신중하게 소개합니다." },
+      { title: "해외 분과 이야기를 나누고 싶어요", body: "문화를 넘어선 인연과 국제결혼에 관심 있는 분들을 따뜻하게 응원합니다." },
+      { title: "고민을 들어줄 누군가가 필요해요", body: "베테랑 점술가 신 선생님이 연애와 인생에 대해 현실적이고 실질적인 조언을 드립니다." },
+      { title: "취미로 언어를 즐기고 싶어요", body: "영어・일본어 레슨을 주 1회 또는 주 2회 선택. 가벼운 대화부터 문화를 잇는 사랑까지." },
+      { title: "해외에 친구를 만들고 싶어요", body: "결혼 목적이 아니어도, 해외 회원과의 가벼운 교류도 함께 제공합니다." },
+      { title: "혼자 하려니 불안해요", body: "부부가 함께 운영하기 때문에, 남성과 여성 모두 편하게 무엇이든 물어보실 수 있습니다." },
+    ],
+  },
+  services: {
+    eyebrow: "Our Services",
+    titleA: "세 가지 축,",
+    titleAccent: "풍요롭게",
+    titleB: "만드는 나날",
+    lead: "중매뿐만 아니라 언어 레슨과 점술까지. 다양한 시선에서 당신의 삶 전체를 응원합니다.",
+    list: [
+      {
+        tag: "Marriage",
+        title: "중매・소개",
+        lead: "일본인 회원과 국제 회원 모두를 위해. 모든 만남을 소중하게 다룹니다.",
+        points: ["월 5명 이상 소개", "만남 및 상담", "국제결혼 대응", "부부 두 사람이 함께 동행"],
+      },
+      {
+        tag: "Language",
+        title: "언어 레슨",
+        lead: "간호사 경력을 살린 강사들이 실제로 쓸 수 있는 언어로 이끌어 드립니다.",
+        points: [
+          "영어 / 일본어 레슨",
+          "주 1회 또는 주 2회 (50분)",
+          "18세 이하 어린이 레슨 가능",
+          "언어 레슨만 단독 수강 가능",
+          "문화를 잇는 연애도 지원",
+        ],
+      },
+      {
+        tag: "Fortune",
+        title: "점술 감정・파워스톤",
+        lead: "신 선생님이 노련하고 현실적인 조언으로 앞길을 밝혀 드립니다.",
+        points: [
+          "연애・인생・결혼 상담",
+          "예언만이 아닌 실천 가능한 조언",
+          "파워스톤 판매",
+          "슈퍼 팬 전용 감정",
+        ],
+      },
+    ],
+  },
+  pricing: {
+    eyebrow: "Pricing",
+    titleA: "간단하고,",
+    titleAccent: "이해하기 쉬운",
+    titleB: "요금제",
+    lead: "초기 비용이 낮아 부담 없이 가입하고 중매 여정을 시작할 수 있습니다. 온라인 서비스로 합리적인 요금과 개인별 지원을 함께 제공합니다. 모든 가격에는 세금이 포함되어 있습니다.",
+    valueMessage: "업계 최저 수준의 요금으로, 다른 결혼상담소와 비교해도 뛰어난 가치를 제공합니다.",
+    monthSuffix: "/월",
+    perMonth: "¥",
+    requestLabel: "문의 시 안내",
+    badge: "가장 추천",
+    note: "* 가격은 변경될 수 있습니다. 최신 정보는 무료 상담에서 확인해 주세요.",
+    payment: {
+      title: "결제 방법",
+      lead: "거주 지역에 맞는 결제 방법을 선택하세요.",
+      groups: [
+        { title: "해외 거주 고객용", methods: ["PayPal", "Wise"] },
+        { title: "일본 거주 고객용", methods: ["PayPay", "계좌이체"] },
+      ],
+    },
+    language: {
+      eyebrow: "Language Lesson Fees",
+      title: "언어 레슨 플랜과 요금",
+      lead: "결혼상담소에 가입하지 않아도 영어・일본어 레슨을 이용하실 수 있습니다. 모든 가격에는 세금이 포함되어 있습니다.",
+      childNote: "18세 이하 어린이도 레슨을 받으실 수 있습니다.",
+      headers: { plan: "레슨 / 빈도", adult: "성인", child: "어린이 (18세 이하)" },
+      rows: [
+        { lesson: "영어 레슨", frequency: "주 1회 (월 4회)", adult: "¥8,800", child: "¥5,500" },
+        { lesson: "영어 레슨", frequency: "주 2회 (월 8회)", adult: "¥15,400", child: "¥9,900" },
+        { lesson: "일본어 레슨", frequency: "주 1회 (월 4회)", adult: "¥11,000", child: "¥8,800" },
+        { lesson: "일본어 레슨", frequency: "주 2회 (월 8회)", adult: "¥19,800", child: "¥15,500" },
+      ],
+    },
+    plans: [
+      {
+        name: "일본 회원",
+        caption: "국내 결혼을 원하는 분을 위해",
+        monthly: "11,000",
+        perMatch: "만남・상담 ¥3,300 / 1회",
+        successFee: "일본 국적 성공 보수: ¥165,000 (세금 포함)",
+        features: [
+          "월 회비 (세금 포함)",
+          "만남마다 설정 비용",
+          "온라인 상담",
+          "궁합 분석・프로필 검토",
+        ],
+        cta: "이 플랜 문의하기",
+        highlight: false,
+      },
+      {
+        name: "국제 회원",
+        caption: "국제결혼을 원하는 분을 위해",
+        monthly: "11,000",
+        perMatch: "만남・상담 ¥5,500 / 1회",
+        successFee: "외국 국적 성공 보수: ¥220,000 (세금 포함)",
+        features: [
+          "문화 간 결혼 상담",
+          "문화 간 소통 지원",
+          "해외 회원과의 만남",
+          "언어 지원 통합",
+        ],
+        cta: "국제 플랜 자세히 보기",
+        highlight: true,
+      },
+      {
+        name: "언어 레슨",
+        caption: "언어를 사랑하는 분을 위해",
+        monthly: "8,800",
+        perMatch: "주 1회 / 주 2회 (50분)",
+        features: ["영어 ¥8,800부터", "일본어 ¥11,000부터", "18세 이하 어린이 지원", "30분 무료 체험"],
+        cta: "레슨 체험하기",
+        highlight: false,
+      },
+    ],
+  },
+  staff: {
+    eyebrow: "Our Team",
+    titleA: "",
+    titleAccent: "따뜻한",
+    titleB: "부부가 운영하는 ",
+    titleC: " 결혼상담소",
+    lead:
+      "저희는 부부가 함께 운영하는 결혼상담소입니다. 국내든 국제든, 한 분 한 분에게 맞춘 지원을 제공합니다.",
+    members: [
+      {
+        role: "대표 / 점술가 / 상담사",
+        name: "SHIN",
+        initials: "S",
+        bio:
+          "25세에 회사를 창업해 현재 37세, 사업가로서 15년 이상의 경험을 쌓았습니다. 이혼과 재혼을 직접 겪었고, 지금은 두 아이의 아빠로서 육아에 힘쓰고 있습니다. 사랑과 결혼은 이상만으로 이루어지지 않으며, 일상이 그만큼 중요합니다. 그래서 점술가로서의 관점뿐 아니라, 남편이자 아빠로서의 경험에서 우러난 조언을 드립니다. 함께 행복한 결혼이란 무엇인지 고민하고, 당신에게 맞는 인연을 찾을 수 있도록 응원하겠습니다.",
+        tags: ["점술", "인생 상담", "사업"],
+        image: "/rabbit/shin.png",
+      },
+      {
+        role: "언어 강사 / 상담사",
+        name: "YUKA",
+        initials: "Y",
+        bio:
+          "전직 간호사로, 경청하는 능력을 살려 안심할 수 있는 공간을 만듭니다. 약 6개월 만에 회화 영어를 익힌 경험을 바탕으로, 실제로 쓸 수 있는 언어에 초점을 맞춥니다. 문화를 잇는 인연도 함께 응원합니다. 가정을 꾸리면서 일하고 있습니다.",
+        tags: ["영어", "일본어", "국제 연애"],
+        image: "/rabbit/yuka.png",
+      },
+    ],
+  },
+  voices: {
+    eyebrow: "Voices",
+    titleA: "회원들의",
+    titleAccent: "목소리",
+    lead: "결혼, 언어, 점술을 위해 RABBIT을 선택해 주신 분들의 생생한 후기입니다.",
+    monitorNote:
+      "* 결혼상담소는 현재 정식 오픈을 준비 중입니다. 아래 후기 중 일부는 오픈 전 모니터 회원의 것입니다.",
+    monitorTag: "모니터",
+    items: [
+      {
+        name: "A.K.",
+        meta: "여성, 30대",
+        monitor: true,
+        body:
+          "처음에는 어디서부터 시작해야 할지 몰라 불안했습니다. 조심스럽게 곁에서 함께해 준다는 느낌이 안심이 되었습니다. 남편과 아내 양쪽의 시선에서 조언을 받을 수 있다는 점도 큰 장점입니다.",
+      },
+      {
+        name: "R.S.",
+        meta: "남성, 40대",
+        monitor: true,
+        body:
+          "해외에 있는 분과 교제하는 것에 대해 걱정이 있었지만, 문화와 사고방식의 차이까지 지원해 준다는 말에 안심이 되었습니다. 언어 지원이 함께 포함되어 있다는 점이 정말 유용합니다.",
+      },
+      {
+        name: "M.T.",
+        meta: "여성, 20대 / 점술",
+        body: "신 선생님의 점술은 정확할 뿐 아니라 실제로 무엇을 해야 할지 알려 줍니다. 매달 제 생활의 하이라이트가 되었습니다.",
+      },
+    ],
+  },
+  faq: {
+    eyebrow: "FAQ",
+    titleA: "자주 묻는",
+    titleAccent: "질문",
+    items: [
+      { q: "온라인 결혼상담소란 무엇인가요?", a: "실제 사무실을 방문하지 않고 이용할 수 있는 결혼상담소입니다. RABBIT은 Zoom 등을 활용하여 일본 국내나 해외 어디에서든 참여하실 수 있습니다." },
+      { q: "일본 회원과 국제 회원의 차이는 무엇인가요?", a: "일본 회원은 국내 결혼을, 국제 회원은 국경 간・문화 간 파트너십을 위한 플랜입니다. 당신에게 맞는 플랜을 추천해 드립니다." },
+      { q: "중매와 함께 언어 레슨도 받을 수 있나요?", a: "네, 가능합니다. 국제결혼을 고려하시는 많은 회원분들이 두 가지를 함께 이용하고 있으며, 요청 시 묶음 할인도 가능합니다." },
+      { q: "점술만 이용할 수도 있나요?", a: "물론입니다. 점술만, 또는 파워스톤만 이용하시는 것도 환영합니다." },
+      { q: "먼저 질문만 해도 되나요?", a: "네, 첫 상담은 무료입니다. 아직 가입을 결정하지 않으셨더라도 편하게 문의해 주세요." },
+    ],
+  },
+  cta: {
+    eyebrow: "Free Consultation",
+    titleA: "오늘,",
+    titleAccent: "첫걸음을",
+    titleB: "함께 시작해 보실래요?",
+    lead:
+      "\"나에게 맞을지 모르겠다\"거나 \"그냥 이야기만 듣고 싶다\"는 분도 대환영입니다. 부부가 함께, 천천히 귀 기울여 듣겠습니다.",
+    line: { small: "LINE으로 문의", big: "친구 추가하기" },
+    form: { small: "온라인 상담", big: "예약 폼" },
+  },
+  footer: {
+    tagline:
+      "부부가 함께 운영하는 온라인 결혼상담소. 국내・국제 중매부터 언어와 점술까지, 당신의 첫걸음 곁에 있겠습니다.",
+    companyHeading: "회사 소개",
+    guideHeading: "링크",
+    info: [
+      { label: "서비스명", value: "RABBIT — 온라인 결혼상담소" },
+      { label: "사업 내용", value: "중매, 언어 레슨, 점술 감정, 파워스톤" },
+      { label: "거점", value: "오키나와 / 온라인 전국 대응" },
+      { label: "운영", value: "부부 공동 운영" },
+    ],
+    links: [
+      { key: "service", label: "서비스" },
+      { key: "pricing", label: "요금제" },
+      { key: "team", label: "강사 소개" },
+      { key: "faq", label: "자주 묻는 질문" },
+      { key: "contact", label: "문의" },
+    ],
+    conduct:
+      "회원 여러분께서는 다른 회원이나 운영팀을 향한 비방・중상 또는 괴롭힘을 삼가 주시기 바랍니다. 심각한 경우에는 이용 제한 및 법적 조치를 포함한 적절한 대응을 취하겠습니다.",
+    rights: "© {{year}} RABBIT Online Marriage. All rights reserved.",
+    privacy: "개인정보 처리방침",
+    tos: "특정상거래법 표기",
+  },
+};
+
+export const DICTIONARIES: Record<Lang, Dictionary> = { ja, en, zh, ko };
 
 export function detectBrowserLang(input: string | undefined | null): Lang {
   if (!input) return DEFAULT_LANG;
@@ -1049,5 +1349,6 @@ export function detectBrowserLang(input: string | undefined | null): Lang {
   if (tag.startsWith("ja")) return "ja";
   if (tag.startsWith("zh")) return "zh";
   if (tag.startsWith("en")) return "en";
+  if (tag.startsWith("ko")) return "ko";
   return DEFAULT_LANG;
 }

@@ -9,6 +9,7 @@ const options: { code: Lang; label: string; short: string; href: string }[] = [
   { code: "ja", label: "日本語", short: "JA", href: LOCALE_PATHS.ja },
   { code: "en", label: "English", short: "EN", href: LOCALE_PATHS.en },
   { code: "zh", label: "中文", short: "ZH", href: LOCALE_PATHS.zh },
+  { code: "ko", label: "한국어", short: "KO", href: LOCALE_PATHS.ko },
 ];
 
 export default function LanguageSwitcher({

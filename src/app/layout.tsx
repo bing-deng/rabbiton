@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
-import { Noto_Sans_JP, Noto_Serif_JP, Noto_Sans_SC, Noto_Serif_SC } from "next/font/google";
+import {
+  Noto_Sans_JP,
+  Noto_Serif_JP,
+  Noto_Sans_SC,
+  Noto_Serif_SC,
+  Noto_Sans_KR,
+  Noto_Serif_KR,
+} from "next/font/google";
 import "./globals.css";
 import { SITE, SITE_URL } from "@/lib/site";
 
@@ -26,6 +33,20 @@ const notoSansSC = Noto_Sans_SC({
 
 const notoSerifSC = Noto_Serif_SC({
   variable: "--font-serif-sc",
+  subsets: ["latin"],
+  weight: ["400", "500", "700", "900"],
+  display: "swap",
+});
+
+const notoSansKR = Noto_Sans_KR({
+  variable: "--font-sans-kr",
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  display: "swap",
+});
+
+const notoSerifKR = Noto_Serif_KR({
+  variable: "--font-serif-kr",
   subsets: ["latin"],
   weight: ["400", "500", "700", "900"],
   display: "swap",
@@ -123,7 +144,7 @@ const jsonLd = {
       "@id": `${SITE_URL}#website`,
       url: SITE_URL,
       name: SITE.legalName,
-      inLanguage: ["ja", "en", "zh"],
+      inLanguage: ["ja", "en", "zh", "ko"],
       publisher: { "@id": `${SITE_URL}#organization` },
     },
   ],
@@ -137,7 +158,7 @@ export default function RootLayout({
   return (
     <html
       lang="ja"
-      className={`${notoSansJP.variable} ${notoSerifJP.variable} ${notoSansSC.variable} ${notoSerifSC.variable} h-full antialiased`}
+      className={`${notoSansJP.variable} ${notoSerifJP.variable} ${notoSansSC.variable} ${notoSerifSC.variable} ${notoSansKR.variable} ${notoSerifKR.variable} h-full antialiased`}
     >
       <head>
         <script

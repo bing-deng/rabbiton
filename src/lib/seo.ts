@@ -14,7 +14,7 @@ import {
 export function buildMetadata(lang: Lang): Metadata {
   const { meta } = DICTIONARIES[lang];
   const path = LOCALE_PATHS[lang];
-  const alternateLocales = (["ja", "en", "zh"] as Lang[])
+  const alternateLocales = (["ja", "en", "zh", "ko"] as Lang[])
     .filter((l) => l !== lang)
     .map((l) => OG_LOCALE[l]);
 

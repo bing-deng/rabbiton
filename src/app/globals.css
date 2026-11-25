@@ -12,9 +12,10 @@
   --color-gold-soft: #e2c79b;
   --color-ink: #2d2423;
 
-  --font-sans: var(--font-sans-jp), var(--font-sans-sc), ui-sans-serif,
-    system-ui, sans-serif;
-  --font-serif: var(--font-serif-jp), var(--font-serif-sc), "Noto Serif JP",
+  --font-sans: var(--font-sans-jp), var(--font-sans-sc), var(--font-sans-kr),
+    ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-serif-jp), var(--font-serif-sc), var(--font-serif-kr),
+    "Noto Serif JP",
     "Hiragino Mincho ProN", "Yu Mincho", serif;
 }
 
